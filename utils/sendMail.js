@@ -15,8 +15,7 @@ const sendMail = async (...props) => {
   const options = {
     from: email,
     to: process.env.USER_EMAIL,
-    text: message,
-    html: `<p>From ${email}</p>`,
+    html: `<p>From ${email} : ${message}</p>`,
   };
   await transporter.sendMail(options);
 };
