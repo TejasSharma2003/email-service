@@ -16,9 +16,9 @@ const sendMail = async (...props) => {
     from: email,
     to: process.env.USER_EMAIL,
     text: message,
+    html: `<p>From ${email}</p>`,
   };
   await transporter.sendMail(options);
-
 };
 
 module.exports = sendMail;
